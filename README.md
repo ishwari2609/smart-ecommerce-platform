@@ -41,19 +41,25 @@ A full-stack smart e-commerce platform built using the MERN stack with authentic
 
 ## 📂 Project Structure
 
+```bash
 smart-ecommerce-platform/
 │
 ├── frontend/
+│
 ├── backend/
+│   ├── config/
 │   ├── controllers/
-│   ├── routes/
 │   ├── middleware/
 │   ├── models/
-│   └── services/
+│   ├── routes/
+│   ├── services/
+│   ├── utils/
+│   ├── server.js
+│   └── package.json
 │
-├── package.json
 ├── README.md
 └── .gitignore
+```
 
 ---
 
