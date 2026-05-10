@@ -1,0 +1,123 @@
+/* NAVBAR MAIN */
+.navbar {
+  background: #111827; /* keep your dark theme */
+  color: white;
+  padding: 12px 20px;
+}
+
+/* CONTAINER */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SEARCH */
+.search-box {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ITEMS */
+.nav-item {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* USER DROPDOWN */
+.nav-user {
+  position: relative;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 180px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* ARROW */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 15px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: rotate(45deg);
+}
+
+/* DROPDOWN ITEMS */
+.dropdown div {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown div:hover {
+  background: #f3f4f6;
+}
+
+/* CART */
+.cart {
+  position: relative;
+}
+
+/* CART COUNT */
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* CATEGORY BAR */
+.category-bar {
+  background: #1f2937;
+  color: white;
+  padding: 10px 20px;
+}
+
+.category-container {
+  display: flex;
+  gap: 20px;
+}
+
+.category-container div {
+  cursor: pointer;
+  font-size: 14px;
+}

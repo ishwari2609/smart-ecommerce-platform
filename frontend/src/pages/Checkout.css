@@ -1,0 +1,136 @@
+/* PAGE */
+.checkout-page {
+  padding: 20px 15px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.checkout-page h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* MAIN CONTAINER */
+.checkout-container {
+  max-width: 1000px;   /* 🔥 FIX: reduces empty space */
+  margin: auto;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+/* LEFT + RIGHT CARDS */
+.checkout-left,
+.checkout-right {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* LEFT */
+.checkout-left {
+  flex: 2;
+}
+
+/* RIGHT */
+.checkout-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* GRID */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px; /* 🔥 tighter spacing */
+  margin-top: 10px;
+}
+
+/* FIELD */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUT STYLE */
+.field input,
+.field textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+/* FOCUS */
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.15);
+}
+
+/* TEXTAREA */
+.field textarea {
+  height: 80px; /* 🔥 less height */
+  resize: none;
+}
+
+/* FULL WIDTH */
+.full {
+  grid-column: span 2;
+}
+
+/* RIGHT SIDE TEXT */
+.checkout-right h3 {
+  margin-bottom: 8px;
+}
+
+.checkout-right h2 {
+  margin: 8px 0;
+  font-size: 22px;
+}
+
+/* BUTTON */
+.checkout-right button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.checkout-right button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+}

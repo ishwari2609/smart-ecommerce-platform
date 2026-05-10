@@ -1,0 +1,355 @@
+/* PROFILE CONTAINER */
+.profile-container {
+  min-height: 90vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* PROFILE HEADER */
+.profile-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-pic-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* PROFILE PICTURE */
+.profile-picture {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffd814, #ffcc00);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* UPLOAD LABEL */
+.upload-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #f0c14b;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+
+.upload-label:hover {
+  transform: scale(1.1);
+}
+
+/* PROFILE HEADER INFO */
+.profile-header-info h1 {
+  font-size: 32px;
+  color: #131921;
+  margin: 0 0 10px 0;
+}
+
+.profile-header-info .email {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 5px 0;
+}
+
+.profile-header-info .role {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 20px 0;
+}
+
+/* EDIT BUTTON */
+.edit-btn {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ffd814, #ffcc00);
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* PROFILE CONTENT */
+.profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card h2 {
+  font-size: 22px;
+  color: #131921;
+  margin: 0 0 24px 0;
+  border-bottom: 2px solid #f0c14b;
+  padding-bottom: 12px;
+}
+
+/* PROFILE FORM */
+.profile-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #131921;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f0c14b;
+}
+
+/* FORM ROW */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* FORM ACTIONS */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.save-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background: linear-gradient(45deg, #10b981, #059669);
+  color: white;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.cancel-btn {
+  background: #f3f3f3;
+  color: #666;
+  border: 2px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background: #f9f9f9;
+  border-color: #999;
+}
+
+/* PROFILE INFO DISPLAY */
+.profile-info-display {
+  display: grid;
+  gap: 16px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.info-item {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #f0c14b;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #666;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.info-item p {
+  color: #131921;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* WISHLIST BUTTON */
+.wishlist-link-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.wishlist-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* ACCOUNT OPTIONS */
+.account-options {
+  display: grid;
+  gap: 12px;
+}
+
+.option-btn {
+  padding: 14px 16px;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  color: #131921;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  border-color: #f0c14b;
+  background: rgba(240, 193, 75, 0.05);
+  transform: translateX(4px);
+}
+
+.option-btn.logout {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.option-btn.logout:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 24px;
+  }
+
+  .profile-pic-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .profile-header-info h1 {
+    font-size: 24px;
+  }
+
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 20px 10px;
+  }
+
+  .profile-header {
+    padding: 16px;
+  }
+
+  .profile-picture {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-header-info h1 {
+    font-size: 20px;
+  }
+
+  .profile-card {
+    padding: 16px;
+  }
+
+  .profile-card h2 {
+    font-size: 18px;
+  }
+}

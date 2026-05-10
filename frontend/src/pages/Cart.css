@@ -1,0 +1,153 @@
+.cart-page {
+  padding: 15px;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+}
+
+.cart-title {
+  margin-bottom: 20px;
+}
+
+/* MAIN LAYOUT */
+.cart-container {
+  display: flex;
+  gap: 15px;
+}
+
+/* LEFT SIDE */
+.cart-left {
+  flex: 3;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+/* DETAILS */
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.stock {
+  color: green;
+  font-weight: 600;
+}
+
+.delivery {
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* QTY */
+.qty {
+  margin-top: 10px;
+}
+
+.qty select {
+  margin-left: 8px;
+  padding: 4px;
+}
+
+/* LINKS */
+.links {
+  margin-top: 10px;
+}
+
+.links span {
+  margin-right: 15px;
+  color: #007185;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.links span:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+.cart-right {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+/* PRICE DETAILS */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.free {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.add-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.buy-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #fb641b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #d95300;
+}
+
+/* EMPTY CART */
+.empty {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+}
+

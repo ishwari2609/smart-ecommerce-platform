@@ -1,0 +1,454 @@
+.recommendations-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #131921, #1f2f47);
+  padding: 25px 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rec-header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideDown 0.6s ease;
+}
+
+.rec-header h1 {
+  font-size: 2.5rem;
+  color: #f0c14b;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.rec-subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin: 0;
+}
+
+.rec-loading,
+.rec-error {
+  background: rgba(42, 56, 84, 0.95);
+  padding: 60px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 50px auto;
+  border: 1px solid rgba(240, 193, 75, 0.2);
+}
+
+.rec-error h2 {
+  color: #f0c14b;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.rec-error p {
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* Interests Section */
+.rec-interests-section {
+  background: rgba(42, 56, 84, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(240, 193, 75, 0.1);
+}
+
+.rec-interests-section h2 {
+  font-size: 1.8rem;
+  color: #f0c14b;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rec-interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.rec-interest-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #f0c14b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rec-interest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(240, 193, 75, 0.2);
+}
+
+.rec-interest-card h3 {
+  color: #f0c14b;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+.rec-interest-card p {
+  color: #9ca3af;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.rec-interest-bar {
+  background: rgba(255, 255, 255, 0.1);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.rec-interest-fill {
+  background: linear-gradient(90deg, #f0c14b, #ffcc00);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.rec-interest-percent {
+  display: inline-block;
+  color: #f0c14b;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/* Product Sections */
+.rec-section {
+  background: rgba(42, 56, 84, 0.95);
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.6s ease;
+  border: 1px solid rgba(240, 193, 75, 0.1);
+}
+
+.rec-section-title {
+  font-size: 1.8rem;
+  color: #f0c14b;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rec-section-subtitle {
+  color: #d1d5db;
+  font-size: 1rem;
+  margin: 0 0 25px 0;
+}
+
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.rec-product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(240, 193, 75, 0.1);
+}
+
+.rec-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(240, 193, 75, 0.2);
+}
+
+.rec-image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rec-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.rec-product-card:hover .rec-product-image {
+  transform: scale(1.05);
+}
+
+.rec-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 2rem;
+}
+
+.rec-discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.rec-product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.rec-product-name {
+  font-size: 1.2rem;
+  color: #f0c14b;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.rec-description {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.rec-category-badge {
+  display: inline-block;
+  background: rgba(240, 193, 75, 0.2);
+  color: #f0c14b;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.rec-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.rec-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0c14b;
+}
+
+.rec-original-price {
+  font-size: 1rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.rec-stock-info {
+  margin-bottom: 12px;
+}
+
+.rec-stock {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.rec-stock.in-stock {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.rec-stock.low-stock {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.2);
+}
+
+.rec-reason {
+  font-size: 0.85rem;
+  color: #60a5fa;
+  font-style: italic;
+  margin-bottom: 15px;
+  padding: 8px;
+  background: rgba(96, 165, 250, 0.1);
+  border-radius: 4px;
+  border-left: 3px solid #60a5fa;
+}
+
+.rec-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.rec-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.rec-btn-details {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0c14b;
+  border: 1px solid rgba(240, 193, 75, 0.3);
+}
+
+.rec-btn-details:hover {
+  background: rgba(240, 193, 75, 0.2);
+  transform: translateY(-2px);
+}
+
+.rec-btn-cart {
+  background: linear-gradient(45deg, #f0c14b, #ffcc00);
+  color: black;
+  font-weight: bold;
+}
+
+.rec-btn-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(240, 193, 75, 0.4);
+}
+
+.rec-btn-primary {
+  background: linear-gradient(45deg, #f0c14b, #ffcc00);
+  color: black;
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+.rec-btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.rec-btn-large {
+  background: linear-gradient(45deg, #f0c14b, #ffcc00);
+  color: black;
+  padding: 14px 40px;
+  font-size: 1.05rem;
+  margin-top: 30px;
+}
+
+.rec-btn-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(240, 193, 75, 0.3);
+}
+
+.rec-footer {
+  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recommendations-container {
+    padding: 20px 10px;
+  }
+
+  .rec-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .rec-interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rec-section {
+    padding: 20px 15px;
+  }
+
+  .rec-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .rec-product-info {
+    padding: 15px;
+  }
+
+  .rec-actions {
+    flex-direction: column;
+  }
+
+  .rec-btn {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendations-container {
+    padding: 15px 8px;
+  }
+
+  .rec-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .rec-section-title {
+    font-size: 1.3rem;
+  }
+
+  .rec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rec-image-container {
+    height: 180px;
+  }
+}
